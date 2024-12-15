@@ -1,3 +1,5 @@
+import os
+from fastapi.responses import FileResponse
 import uvicorn
 from app.database import  engine
 from fastapi import FastAPI
@@ -11,13 +13,15 @@ app = FastAPI(
 )
 
 app.include_router(url)
+
 app.mount("/static", StaticFiles(directory='static'), name='static')
+
 
 
 if __name__ == '__main__':
     UserModel.metadata.create_all(engine)
     JornalModel.metadata.create_all(engine)
     print('Start Server')
-    uvicorn.run('main:app', port = 8000, host='127.0.0.1', reload=True)
+    uvicorn.run('main:app', port = 1234, host='localhost', reload=True)
     print('Server Stop')
 
