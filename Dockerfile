@@ -4,12 +4,10 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
-COPY /app .src/app
-COPY /static .src/static 
-COPY /templates .src/templates
-COPY main.py .src/
-
-WORKDIR /src
+COPY /app ./app
+COPY /static ./static 
+COPY /templates ./templates
+COPY main.py .
 
 EXPOSE 8000
 
