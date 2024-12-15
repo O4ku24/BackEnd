@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f9fa; /* Светло-серый фон */
+}
+.navbar {
+    background-color: #343a40; /* Темно-серый фон навигационного бара */
+}
+.navbar .nav-item .btn {
+    color: #fff; /* Белый текст */
+}
+.btn-yellow {
+    background-color: #ffc107; /* Желтый фон кнопки */
+    border-color: #ffc107;
+}
+.btn-yellow:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
